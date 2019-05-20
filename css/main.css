@@ -50,7 +50,7 @@ header h1{
     border:1px solid #313131;
     border-radius: 5px;
     letter-spacing: 3px;
-    font-weight:400;
+    font-weight:700;
     float: left;
 }
 header p{
@@ -118,12 +118,11 @@ section{
     overflow: hidden;
 }
 article{
-    width: calc(50% - 15px);
+    width: 100%;
     padding: 2.5%;
     margin-bottom: 30px;
     background-color: #f9f9f9;
     overflow: hidden;
-    float: left;
 }
 article:nth-child(2n){
     margin-left: 30px;
@@ -150,6 +149,20 @@ article h1{
     margin-bottom: 15px;
     float: left;
 }
+article h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px;
+}
+.align-left{
+    text-align: left;
+}
+article h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
 article p{
     font-size: 100%;
     color: #313131;
@@ -181,6 +194,16 @@ article .btn:hover{
     color: orange;
     overflow: hidden;
 }
+section {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+}
+section:nth-child(even) {
+  background: #f2f2f2;
+}
 
 footer{
     font-size: 80%;
@@ -194,4 +217,3 @@ footer address{
     color: #fff;
     letter-spacing: 5px;
 }
-
