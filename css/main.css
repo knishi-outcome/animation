@@ -1,6 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+	font-family: 'astonished';
+	src: url(../font/ASTONISHED.TTF);
+}
+@font-face {
+    font-family: 'misproject';
+    src: url(../font/MISPROJECT.TTF);
+}
+
 body{
 font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
 margin:0;
@@ -12,6 +21,47 @@ outline:none;
 border-style:none;
 }
 
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.video {
+	width: 100%;
+	transition: .5s;
+	z-index: 5;
+}
+.vid-wrap {
+	height: 500px;
+	background-color: hsl(0,0%,10%);
+	transition: .5s;
+    padding: auto;
+    text-align: center;
+}
+.vid-wrap > iframe {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	max-width: 854px;
+}
+.aside {
+	/* position: fixed; */
+	width: 40%;
+    float: left;
+}
+.aside .vid-wrap {
+	height: 240px;
+}
+.aside h1 {
+	opacity: 0;
+}
+.post{
+
+}
+.aside-post{
+    float: right;
+    width: 45%;
+}
 a{
     color:blue;
     -webkit-transition: all 0.5s;
@@ -34,8 +84,7 @@ a:hover {
 /*****HEADER*****/
 header{
     display: block;
-    width:60%;
-    margin-left: 20%;
+    width:100%;
     overflow: hidden;
 }
 header h1{
@@ -53,6 +102,73 @@ header h1{
     font-weight:700;
     float: left;
 }
+
+@-webkit-keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+@keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+.change-bgcolor{
+    background-color: #e74c3c;
+    animation: bg-color 10s infinite;
+    -webkit-animation: bg-color 10s infinite;
+}
+
+.top-banner h2{
+    font-size: 100px;
+    background: -webkit-linear-gradient(#00d0ff, #25ffbf);
+    /* -webkit-text-fill-color: transparent; */
+    color: white;
+    margin-left: 20%;
+    font-weight: 200;
+}
+
+.font-astonished{
+    font-family: astonished;
+}
+.dummy-height{
+    height: 300px;
+}
+.font-misproject{
+    font-family: misproject;
+}
+
+button#popup1 {
+    min-width: 135px;
+    max-width: 200px;
+    min-height: 50px;
+    border: 0;
+    outline: 0;
+
+    color: white;
+
+    /* pink to orange */
+    background: #ee0979;
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+
+    vertical-align: top;
+    cursor: pointer;
+}
+.button-area{
+    text-align: center;
+}
+
+header .top-banner{
+    width: 100%;
+}
+
 header p{
     font-size:100%;
     color:#313131;
@@ -118,7 +234,7 @@ section{
     overflow: hidden;
 }
 article{
-    width: 100%;
+    max-width: 100%;
     padding: 2.5%;
     margin-bottom: 30px;
     background-color: #f9f9f9;
@@ -149,6 +265,7 @@ article h1{
     margin-bottom: 15px;
     float: left;
 }
+
 article h2 {
   font-size: 30px;
   font-weight: 700;
