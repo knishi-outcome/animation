@@ -46,6 +46,6 @@ $(function () {
 
 //particles button animation
 //canvas generation
-var btn = document.querySelector("button");
-var container = document.querySelector(".container");
-html2canvas(btn).then(canvas => {container.appendChild(canvas);})
+// var btn = document.querySelector("button");
+// var container = document.querySelector(".container");
+// html2canvas(btn).then(canvas => {container.appendChild(canvas);})
