@@ -1,4 +1,3 @@
-
 // Double motion
 var EffectH = 100;
 $(window).on('scroll load', function() {
@@ -19,7 +18,6 @@ $(window).on('scroll load', function() {
   });
 });
 $(function () {
-    console.log("hello world");
     // Video aside animation with scroll
     var vid = $('.video');
     var pid = $('.post');
@@ -30,12 +28,8 @@ $(function () {
     $(window).on('scroll', function(event) {
     	// what the y position of the scroll is
     	var y = $(this).scrollTop();
-        // var y = scBottom - EffectH;
-        console.log('y:'+y);
-        console.log('top:'+top);
     	// whether that's below the form
     	if (y >= top) {
-
     		// if so, ad the fixed class
     		if ( vid.is('.aside') ) {
     			return;
@@ -43,10 +37,15 @@ $(function () {
     		vid.addClass('aside');
             pid.addClass('aside-post')
     	} else {
-
     		// otherwise remove it
     		vid.removeClass('aside');
             pid.removeClass('aside-post')
     	}
     });
 });
+
+//particles button animation
+//canvas generation
+var btn = document.querySelector("button");
+var container = document.querySelector(".container");
+html2canvas(btn).then(canvas => {container.appendChild(canvas);})
